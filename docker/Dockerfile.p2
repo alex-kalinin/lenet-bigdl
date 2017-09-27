@@ -1,0 +1,8 @@
+FROM continuumio/miniconda
+WORKDIR /usr/src/app
+COPY install.p2.sh ./
+RUN /bin/bash install.p2.sh
+RUN rm ./install.p2.sh
+COPY start-notebook ./
+ADD ./notebooks ./notebooks
+CMD ["/bin/bash", "start-notebook"]

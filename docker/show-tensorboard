@@ -1,0 +1,2 @@
+ #!/bin/bash
+ tensorboard --logdir=/private/tmp/bigdl_summaries/lenet5-
