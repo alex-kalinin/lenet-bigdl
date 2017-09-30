@@ -2,7 +2,7 @@
 
 #### Notebooks for LetNet/BigDL deep learning workshop
 
-The workshop envronment is available for download in a Docker container. You can run it locally. The contrainer comes with the following pre-installed systems/libraries:
+The workshop environment is available for download in a Docker container. You can run it locally. The contrainer comes with the following pre-installed systems/libraries:
 
 - Ubuntu Linux base image
 - Spark
