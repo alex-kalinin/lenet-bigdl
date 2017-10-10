@@ -1,5 +1,6 @@
 FROM continuumio/miniconda
 WORKDIR /usr/src/app
+COPY jupyter_notebook_config.py ./
 COPY install.p2.sh ./
 RUN /bin/bash install.p2.sh
 RUN rm ./install.p2.sh
