@@ -5,7 +5,7 @@
 INSTALL_HOME=~/bigdl
 
 export SPARK_HOME=$INSTALL_HOME/spark-2.1.1-bin-hadoop2.7
-export BigDL_HOME=$INSTALL_HOME/bigdl-dist-spark-2.1.1-scala-2.11.8-linux64-0.2.0-dist
+export BigDL_HOME=$INSTALL_HOME/dist-spark-2.1.1-scala-2.11.8-linux64-0.2.0-dist
 
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS="notebook --allow-root --notebook-dir=./ --ip=* --no-browser"
