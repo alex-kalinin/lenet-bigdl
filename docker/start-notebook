@@ -5,6 +5,8 @@
 export SPARK_HOME=/usr/src/app/spark-2.1.1-bin-hadoop2.7
 export BigDL_HOME=/usr/src/app/dist-spark-2.1.1-scala-2.11.8-linux64-0.2.0-dist
 
+openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mykey.key -out mycert.pem
+
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS="notebook --allow-root --notebook-dir=./ --ip=* --no-browser --certfile=mycert.pem --keyfile=mykey.key"
 VERSION=0.2.0
