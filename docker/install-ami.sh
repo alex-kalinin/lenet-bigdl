@@ -5,7 +5,7 @@ apt-get update
 curl -O https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
 bash Anaconda3-4.2.0-Linux-x86_64.sh
 
-conda create -y -n py27 python=2.7 
+conda create -y -n py27 python=2.7 anaconda
 source activate py27
 
 pip install python-mnist
@@ -24,3 +24,8 @@ mv *.zip dist-spark-2.1.1-scala-2.11.8-linux64-0.2.0-dist
 cd dist-spark-2.1.1-scala-2.11.8-linux64-0.2.0-dist
 unzip *.zip
 
+cd ..
+git clone 
+cd lenet-bigdl/docker
+
+openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mykey.key -out mycert.pem
