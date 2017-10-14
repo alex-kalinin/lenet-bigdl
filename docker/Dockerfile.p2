@@ -5,5 +5,6 @@ COPY install.p2.sh ./
 RUN /bin/bash install.p2.sh
 RUN rm ./install.p2.sh
 COPY start-notebook ./
+COPY my* ./
 ADD ./notebooks ./notebooks
 CMD ["/bin/bash", "start-notebook"]
