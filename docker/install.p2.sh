@@ -25,5 +25,6 @@ mv *.zip dist-spark-2.1.1-scala-2.11.8-linux64-0.2.0-dist
 cd dist-spark-2.1.1-scala-2.11.8-linux64-0.2.0-dist
 unzip *.zip
 
+cd ..
 mkdir ~/.jupyter
 mv jupyter_notebook_config.py ~/.jupyter/
