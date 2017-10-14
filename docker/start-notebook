@@ -3,7 +3,7 @@
 # setup paths, please use absolute path
 
 export SPARK_HOME=/usr/src/app/spark-2.1.1-bin-hadoop2.7
-export BigDL_HOME=/usr/src/app/bigdl-dist-spark-2.1.1-scala-2.11.8-linux64-0.2.0-dist
+export BigDL_HOME=/usr/src/app/dist-spark-2.1.1-scala-2.11.8-linux64-0.2.0-dist
 
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS="notebook --allow-root --notebook-dir=./ --ip=* --no-browser --certfile=mycert.pem --keyfile=mykey.key"
@@ -22,7 +22,7 @@ ${SPARK_HOME}/bin/pyspark \
   --driver-memory 5g \
   --properties-file ${BigDL_HOME}/conf/spark-bigdl.conf \
   --py-files ${BigDL_HOME}/lib/bigdl-${VERSION}-python-api.zip \
-  --jars ${BigDL_HOME}/lib/SPARK_2.1-${VERSION}-jar-with-dependencies.jar \
+  --jars ${BigDL_HOME}/lib/bigdl-SPARK_2.1-${VERSION}-jar-with-dependencies.jar \
   --conf spark.driver.extraClassPath=${BigDL_HOME}/lib/bigdl-SPARK_2.1-${VERSION}-jar-with-dependencies.jar \
   --conf spark.executor.extraClassPath=${BigDL_HOME}/lib/bigdl-SPARK_2.1-${VERSION}-jar-with-dependencies.jar
   
