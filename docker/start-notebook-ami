@@ -13,7 +13,7 @@ VERSION=0.2.0
 
 source activate py27
 
-tensorboard --logdir=/tmp/bigdl_summaries/lenet5-  2>&1 >tensorboard.log &
+# tensorboard --logdir=/tmp/bigdl_summaries/lenet5-  2>&1 >tensorboard.log &
 
 if [ -z "$CORES" ]; then
 	CORES=2
