@@ -1,6 +1,0 @@
-FROM kalininalex/lenet-bigdl
-WORKDIR /usr/src/app
-COPY jupyter_notebook_config.py ./
-COPY install.p2-updated.sh ./
-RUN /bin/bash install.p2-updated.sh
-CMD ["/bin/bash", "start-notebook"]
