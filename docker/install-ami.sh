@@ -25,7 +25,7 @@ cd dist-spark-2.1.1-scala-2.11.8-linux64-0.2.0-dist
 unzip *.zip
 
 cd ..
-git clone 
+git clone https://github.com/alex-kalinin/lenet-bigdl
 cd lenet-bigdl/docker
 
 openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mykey.key -out mycert.pem
