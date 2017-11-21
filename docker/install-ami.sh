@@ -13,15 +13,15 @@ source activate py27
 
 conda install -y -c reeder java-jdk
 
-wget https://d3kbcqa49mib13.cloudfront.net/spark-2.1.1-bin-hadoop2.7.tgz
-tar xzf spark-2.1.1-bin-hadoop2.7.tgz
+wget https://d3kbcqa49mib13.cloudfront.net/spark-2.2.0-bin-hadoop2.7.tgz
+tar xzf spark-2.2.0-bin-hadoop2.7.tgz
 
-wget https://repo1.maven.org/maven2/com/intel/analytics/bigdl/dist-spark-2.1.1-scala-2.11.8-linux64/0.2.0/dist-spark-2.1.1-scala-2.11.8-linux64-0.2.0-dist.zip
+wget https://repo1.maven.org/maven2/com/intel/analytics/bigdl/dist-spark-2.2.0-scala-2.11.8-linux64/0.3.0/dist-spark-2.2.0-scala-2.11.8-linux64-0.3.0-dist.zip
 sudo apt-get -y install unzip
 
-mkdir dist-spark-2.1.1-scala-2.11.8-linux64-0.2.0-dist
-mv *.zip dist-spark-2.1.1-scala-2.11.8-linux64-0.2.0-dist
-cd dist-spark-2.1.1-scala-2.11.8-linux64-0.2.0-dist
+mkdir dist-spark-2.2.0-scala-2.11.8-linux64-0.3.0-dist
+mv *.zip dist-spark-2.2.0-scala-2.11.8-linux64-0.3.0-dist
+cd dist-spark-2.2.0-scala-2.11.8-linux64-0.3.0-dist
 unzip *.zip
 
 pip install python-mnist
