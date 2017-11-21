@@ -8,10 +8,10 @@ bash Anaconda3-4.2.0-Linux-x86_64.sh
 export PATH=/home/ubuntu/anaconda3/bin:$PATH
 
 conda create -y -n py27 python=2.7 anaconda
-conda install -c reeder java-jdk
+conda install -y -c reeder java-jdk
 source activate py27
 
-conda install -c reeder java-jdk
+conda install -y -c reeder java-jdk
 
 wget https://d3kbcqa49mib13.cloudfront.net/spark-2.1.1-bin-hadoop2.7.tgz
 tar xzf spark-2.1.1-bin-hadoop2.7.tgz
