@@ -5,10 +5,10 @@
 export SPARK_HOME=/usr/src/app/spark-2.1.1-bin-hadoop2.7
 export BigDL_HOME=/usr/src/app/dist-spark-2.1.1-scala-2.11.8-linux64-0.2.0-dist
 
-# openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mykey.key -out mycert.pem
+MY_PATH="`dirname \"$0\"`"
 
 export PYSPARK_DRIVER_PYTHON=jupyter
-export PYSPARK_DRIVER_PYTHON_OPTS="notebook --allow-root --notebook-dir=./ --ip=* --no-browser --certfile=mycert.pem --keyfile=mykey.key"
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook --allow-root --notebook-dir=./ --ip=* --no-browser --certfile=${MY_PATH}/mycert.pem --keyfile=${MY_PATH}/mykey.key"
 VERSION=0.2.0
 
 source activate py27
@@ -27,4 +27,3 @@ ${SPARK_HOME}/bin/pyspark \
   --jars ${BigDL_HOME}/lib/bigdl-SPARK_2.1-${VERSION}-jar-with-dependencies.jar \
   --conf spark.driver.extraClassPath=${BigDL_HOME}/lib/bigdl-SPARK_2.1-${VERSION}-jar-with-dependencies.jar \
   --conf spark.executor.extraClassPath=${BigDL_HOME}/lib/bigdl-SPARK_2.1-${VERSION}-jar-with-dependencies.jar
-  
