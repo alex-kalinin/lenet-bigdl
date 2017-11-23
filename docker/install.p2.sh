@@ -26,7 +26,7 @@ cd dist-spark-2.1.1-scala-2.11.8-linux64-0.2.0-dist
 unzip *.zip
 cd ..
 
-openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mykey.key -out mycert.pem
+openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mykey.key -out mycert.pem -subj "/C=US/ST=California/L=San Francisco/O=alex kalinin/CN=kalinin.co"
 
 mkdir ~/.jupyter
 mv jupyter_notebook_config.py ~/.jupyter/
