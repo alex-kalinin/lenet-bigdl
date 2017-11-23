@@ -7,4 +7,4 @@ RUN rm ./install.p2.sh
 COPY start-notebook ./
 COPY my* ./
 WORKDIR /host
-CMD ["/bin/bash", "start-notebook"]
+CMD ["/bin/bash", "/usr/src/app/start-notebook"]
