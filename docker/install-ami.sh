@@ -23,11 +23,10 @@ mkdir dist-spark-2.2.0-scala-2.11.8-linux64-0.3.0-dist
 mv *.zip dist-spark-2.2.0-scala-2.11.8-linux64-0.3.0-dist
 cd dist-spark-2.2.0-scala-2.11.8-linux64-0.3.0-dist
 unzip *.zip
+cd ..
 
 pip install python-mnist
 pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.3.0-cp27-none-linux_x86_64.whl
 
-cd ..
 cd lenet-bigdl/docker
-
 openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mykey.key -out mycert.pem
