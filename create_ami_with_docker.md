@@ -4,7 +4,7 @@
 0. sudo apt update
 0. sudo apt install -y docker.io
 0. sudo docker pull kalininalex/lenet-bigdl-base
-0. docker run -v /home/ubuntu:/host -p 8888:8888 -p 6006:6006 --restart always --env CORES=4 -dit kalininalex/lenet-bigdl-base 
+0. sudo docker run -v /home/ubuntu:/host -p 8888:8888 -p 6006:6006 --restart always --env CORES=4 -dit kalininalex/lenet-bigdl-base 
 0. Test by connecting to https://<instance ip>:8888/
 0. Copy necessary notebooks to /home/ubuntu:
 	0. cd /home/ubuntu
