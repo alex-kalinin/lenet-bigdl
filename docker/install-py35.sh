@@ -28,7 +28,7 @@ sudo apt-get -y install vim
 
 mkdir ${BIGDL_NAME}
 mv *.zip ${BIGDL_NAME}
-cd ${BIGDL_VER}
+cd ${BIGDL_NAME}
 unzip *.zip
 cd ..
 
