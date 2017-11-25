@@ -4,7 +4,7 @@ COPY jupyter_notebook_config.py ./
 COPY install-py35.sh ./
 RUN /bin/bash install-py35.sh
 RUN rm ./install-py35.sh
-COPY start-notebook ./
+COPY start-notebook-py35 ./
 COPY my* ./
 ADD ./notebooks ./notebooks
-CMD ["/bin/bash", "start-notebook"]
+CMD ["/bin/bash", "start-notebook-py35"]
