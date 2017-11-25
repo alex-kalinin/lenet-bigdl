@@ -9,7 +9,7 @@ conda install -y pandas
 conda install -y jupyter
 conda install -y matplotlib
 pip install python-mnist
-pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.3.0-cp27-none-linux_x86_64.whl
+pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.4.0-cp35-cp35m-linux_x86_64.whl
 
 SPARK_VER=2.2.0
 BIGDL_VER=0.3.0
