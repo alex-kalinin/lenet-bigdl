@@ -7,4 +7,4 @@ RUN rm ./install-py35.sh
 COPY start-notebook-py35 ./
 COPY my* ./
 WORKDIR /host
-CMD ["/bin/bash", "start-notebook-py35"]
+CMD ["/bin/bash", "/usr/src/app/start-notebook-py35"]
