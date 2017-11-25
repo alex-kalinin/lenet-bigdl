@@ -6,5 +6,5 @@ RUN /bin/bash install-py35.sh
 RUN rm ./install-py35.sh
 COPY start-notebook-py35 ./
 COPY my* ./
-ADD ./notebooks ./notebooks
+WORKDIR /host
 CMD ["/bin/bash", "start-notebook-py35"]
