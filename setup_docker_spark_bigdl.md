@@ -4,12 +4,12 @@
 
 2) Get the project from git:
 ```
-git pull https://github.com/alex-kalinin/lenet-bigdl
+git clone https://github.com/alex-kalinin/lenet-bigdl
 ```
 
 3) Build the docker container:
 ```
-cd lenet-bigdl\docker
+cd lenet-bigdl/docker
 docker build -t kalininalex/lenet-bigdl-base -f Dockerfile.py35 .
 ```
 
