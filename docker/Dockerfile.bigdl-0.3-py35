@@ -4,6 +4,6 @@ COPY jupyter_notebook_config.py ./
 COPY install-bigdl-0.3-py27.sh ./
 RUN /bin/bash install-bigdl-0.3-py27.sh
 RUN rm install-bigdl-0.3-py27.sh
-COPY start-notebook-py35 ./
+COPY start-notebook-bigdl-0.3.py27 ./
 WORKDIR /host
-CMD ["/bin/bash", "/usr/src/app/start-notebook-py35"]
+CMD ["/bin/bash", "/usr/src/app/start-notebook-bigdl-0.3.py27"]
