@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# setup paths, please use absolute path
+
+export SPARK_HOME=/usr/src/app/spark-2.2.0-bin-hadoop2.7
+export BigDL_HOME=/usr/src/app/dist-spark-2.2.0-scala-2.11.8-linux64-0.3.0-dist
+
+MY_PATH="`dirname \"$0\"`"
+
+export PYSPARK_DRIVER_PYTHON=jupyter
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook --allow-root --notebook-dir=./ --ip=* --no-browser --certfile=${MY_PATH}/mycert.pem --keyfile=${MY_PATH}/mykey.key"
+VERSION=0.3.0
+
+source activate py27
+
+tensorboard --logdir=/tmp/bigdl_summaries/lenet5-  2>&1 >tensorboard.log &
+
+if [ -z "$CORES" ]; then
+	CORES=2
+fi
+
+${SPARK_HOME}/bin/pyspark \
+  --master local[$CORES] \
+  --driver-memory 5g \
+  --properties-file ${BigDL_HOME}/conf/spark-bigdl.conf \
+  --py-files ${BigDL_HOME}/lib/bigdl-${VERSION}-python-api.zip \
+  --jars ${BigDL_HOME}/lib/bigdl-SPARK_2.2-${VERSION}-jar-with-dependencies.jar \
+  --conf spark.driver.extraClassPath=${BigDL_HOME}/lib/bigdl-SPARK_2.2-${VERSION}-jar-with-dependencies.jar \
+  --conf spark.executor.extraClassPath=${BigDL_HOME}/lib/bigdl-SPARK_2.2-${VERSION}-jar-with-dependencies.jar
