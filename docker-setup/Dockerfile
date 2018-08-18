@@ -1,10 +1,9 @@
-FROM ubuntu:latest
-WORKDIR /root
-RUN apt-get update --fix-missing 
-RUN apt-get install -y wget bzip2 ca-certificates libglib2.0-0 libxext6 libsm6 libxrender1 git mercurial subversion vim unzip
-COPY jupyter_notebook_config.py ./
-COPY install-bigdl.sh ./
-RUN bash -i install-bigdl.sh
+FROM kalininalex/image-transfer-learning
+WORKDIR /usr/src/app
+RUN rm *.ipynb
+RUN rm -rf demo
+RUN rm -rf images
+RUN pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.4.0-cp35-cp35m-linux_x86_64.whl
 COPY start-notebook ./
-RUN git clone https://github.com/alex-kalinin/bigdl-notebooks.git
-CMD ["/bin/bash", "-i", "/root/start-notebook"]
+COPY jupyter_with_zoo.sh ./
+CMD ["/bin/bash", "-i", "./jupyter-with-zoo.sh"]
