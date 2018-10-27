@@ -1,3 +1,5 @@
 /.ipynb_checkpoints/
 /metastore_db/
 *.log
+/flower_photos/
+/flower_photos.tgz
